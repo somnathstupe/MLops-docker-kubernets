@@ -15,18 +15,7 @@ docker rm serving_base
 # Check container working 
 docker run -d -p 8501:8501 somnathstupe/mymodel-serving
 
-<!-- {
-    "model_version_status": [
-        {
-            "version": "1",
-            "state": "AVAILABLE",
-            "status": {
-                "error_code": "OK",
-                "error_message": ""
-            }
-        }
-    ]
-} -->
+![alt text](image.png)
 
 
 #  Push docker image to docker hub
