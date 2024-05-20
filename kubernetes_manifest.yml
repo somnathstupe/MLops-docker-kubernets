@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mymodel-serving
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mymodel-serving
+  template:
+    metadata:
+      labels:
+        app: mymodel-serving
+    spec:
+      containers:
+      - name: mymodel-serving
+        image: somnathstupe/mymodel-serving
+        ports:
+        - containerPort: 8501
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mymodel-serving
+spec:
+  ports:
+  - port: 8501
+    nodePort: 30111
+  selector:
+    app: mymodel-serving
+  type: NodePort
