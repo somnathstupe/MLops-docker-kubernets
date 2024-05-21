@@ -19,9 +19,9 @@ docker run -d -p 8501:8501 somnathstupe/mymodel-serving
 
 
 #  Push docker image to docker hub
-docker push my-registry/mymodel-serving
+docker push somnathstupe/model-serving
 
-# Create yml file 
+# Create a  yml file 
 kubernetes_manifest.yml
 
 # Deploying the container to Kubernetes
